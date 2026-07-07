@@ -1,0 +1,6 @@
+1: População total
+2: Numero de Casos Absoluto
+3: Numero de Casos Relativo
+4: IPS
+
+OBS: Todos normalizados
