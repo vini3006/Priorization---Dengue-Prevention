@@ -2,12 +2,12 @@ import pandas as pd
 import pulp
 import matplotlib.pyplot as plt
 import numpy as np
+from config import CUSTO_POR_KM2
 
 # --- Caminhos ---
 PATH_SAW      = "../data/saw_per_RA.csv"        # tem todos os critérios brutos + normalizados
 OUTPUT_DIR    = "../data/outputs"
 
-CUSTO_POR_KM2 = 80_000        # R$/km² — nebulização UBV urbana
 ORCAMENTOS    = [50_000_000, 75_000_000, 100_000_000]
 
 # --- Carrega dados (já com SAW e critérios calculados) ---

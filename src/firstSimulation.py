@@ -3,11 +3,11 @@ import pulp
 import matplotlib.pyplot as plt
 import matplotlib.patches as mpatches
 import numpy as np
+from config import CUSTO_POR_KM2
 
 PATH_RANKING = "../data/ranking_saw.csv"
 OUTPUT_DIR   = "../data/outputs"
 
-CUSTO_POR_KM2 = 80_000        # R$/km² — nebulização UBV urbana (inseticida + veículo + mão de obra)
 ORCAMENTOS    = [50_000_000, 75_000_000, 100_000_000]
 
 df = pd.read_csv(PATH_RANKING, encoding="utf-8-sig", index_col="Rank")
