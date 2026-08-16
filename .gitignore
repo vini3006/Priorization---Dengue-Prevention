@@ -1,2 +1,4 @@
 otimizacao_priorizacao_dengue.pptx
 .venv/
+__pycache__/
+*.pyc
