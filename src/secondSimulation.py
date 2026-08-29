@@ -7,7 +7,7 @@ from config import CUSTO_POR_KM2
 PATH_SAW   = "../data/saw_per_RA.csv"
 OUTPUT_DIR = "../data/outputs"
 
-N_ORCAMENTOS  = 20
+N_ORCAMENTOS  = 50
 
 # --- Carrega dados (já com SAW e critérios brutos calculados) ---
 df = pd.read_csv(PATH_SAW, encoding="utf-8-sig", index_col="Rank")
@@ -71,8 +71,8 @@ for B in orcamentos:
           f"taxa={res['casos_relativos']:.5f}")
 
 tabela = pd.DataFrame(resultados)
-tabela.to_csv(f"{OUTPUT_DIR}/tradeoff_curve.csv", index=False, encoding="utf-8-sig")
-print(f"\nTabela salva em: {OUTPUT_DIR}/tradeoff_curve.csv")
+tabela.to_csv(f"{OUTPUT_DIR}/tradeoff_curve_{N_ORCAMENTOS}.csv", index=False, encoding="utf-8-sig")
+print(f"\nTabela salva em: {OUTPUT_DIR}/tradeoff_curve_{N_ORCAMENTOS}.csv")
 
 # --- Gráficos: benefício x custo ---
 fig, axes = plt.subplots(2, 2, figsize=(14, 10))
@@ -99,7 +99,7 @@ for ax, y, cor, ylabel, titulo in paineis:
     ax.grid(alpha=0.3)
 
 plt.tight_layout()
-plt.savefig(f"{OUTPUT_DIR}/tradeoff_curve.png", dpi=150, bbox_inches="tight")
+plt.savefig(f"{OUTPUT_DIR}/tradeoff_curve_{N_ORCAMENTOS}.png", dpi=150, bbox_inches="tight")
 plt.close()
 
-print(f"Gráfico salvo em: {OUTPUT_DIR}/tradeoff_curve.png")
+print(f"Gráfico salvo em: {OUTPUT_DIR}/tradeoff_curve_{N_ORCAMENTOS}.png")
