@@ -1,0 +1,6 @@
+﻿FO,Heuristica_Gulosa,MILP
+C1_CasosAbsolutos,0.001905,0.052851
+C2_CasosRelativos,0.001935,0.036212
+C3_Populacao,0.001832,0.042894
+C4_Vulnerabilidade,0.001561,0.035509
+FO_Agregada_SAW,0.001811,0.03489
